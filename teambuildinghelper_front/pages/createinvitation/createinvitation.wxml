@@ -1,0 +1,27 @@
+<!--pages/createinvitation/createinvitation.wxml-->
+<view class="index">
+  <!--body-->
+  <form bindsubmit='formSubmit'>
+    <view class="index-bd">
+      <view>
+        <block>
+          <view class="kind-list-item">
+            <view class="kind-list-item-hd">
+              <input name='title' placeholder='16位字符标题' maxlength='16' value="{{invitation?invitation.title:''}}"></input>
+            </view>
+          </view>
+        </block>
+
+        <block>
+          <view class="kind-list-item">
+            <view class="kind-list-item-hd">
+              <textarea name='content' style="height: 7em" placeholder='邀请函内容' value="{{invitation?invitation.content:''}}"/>
+            </view>
+          </view>
+        </block>
+
+        <button type="primary" form-type='submit'>{{invitation.title?'修改':'创建'}}</button>
+      </view>
+    </view>
+  </form>
+</view>

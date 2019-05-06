@@ -1,0 +1,12 @@
+/* pages/me/me.wxss */
+@import "../common/index.wxss";
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+.right-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}

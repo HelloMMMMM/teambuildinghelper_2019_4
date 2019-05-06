@@ -1,0 +1,75 @@
+Table: activity
+-----------------+--------------+------+-----+---------+---------
+ Field           | Type         | Null | Key | Default | Remarks 
+-----------------+--------------+------+-----+---------+---------
+ id              | INT(10)      | NO   | PRI |         |         
+ activityName    | VARCHAR(255) | YES  |     |         |         
+ activityContent | VARCHAR(500) | YES  |     |         |         
+ activityPrice   | VARCHAR(255) | YES  |     |         |         
+ acencyId        | VARCHAR(255) | YES  |     |         |         
+-----------------+--------------+------+-----+---------+---------
+
+Table: agency
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | INT(10)      | NO   | PRI |         |         
+ agencyName  | VARCHAR(255) | YES  |     |         |         
+ agencyPhone | VARCHAR(255) | YES  |     |         |         
+-------------+--------------+------+-----+---------+---------
+
+Table: goods
+------------+---------------+------+-----+---------+---------
+ Field      | Type          | Null | Key | Default | Remarks 
+------------+---------------+------+-----+---------+---------
+ id         | INT(10)       | NO   | PRI |         |         
+ goodsName  | VARCHAR(255)  | YES  |     |         |         
+ goodsPrice | DECIMAL(10,2) | YES  |     |         |         
+ goodsImg   | VARCHAR(255)  | YES  |     |         |         
+------------+---------------+------+-----+---------+---------
+
+Table: invitation
+-------------------+--------------+------+-----+---------+---------
+ Field             | Type         | Null | Key | Default | Remarks 
+-------------------+--------------+------+-----+---------+---------
+ id                | INT(10)      | NO   | PRI |         |         
+ invitationTitle   | VARCHAR(255) | YES  |     |         |         
+ invitationContent | VARCHAR(500) | YES  |     |         |         
+ inviterName       | VARCHAR(255) | YES  |     |         |         
+ inviterId         | INT(10)      | YES  |     |         |         
+-------------------+--------------+------+-----+---------+---------
+
+Table: order
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | INT(10)      | NO   | PRI |         |         
+ orderType   | INT(10)      | YES  |     |         |         
+ goodsId     | INT(10)      | YES  |     |         |         
+ activityId  | INT(10)      | YES  |     |         |         
+ agencyId    | INT(10)      | YES  |     |         |         
+ userId      | INT(10)      | YES  |     |         |         
+ agencyPrice | VARCHAR(255) | YES  |     |         |         
+-------------+--------------+------+-----+---------+---------
+
+Table: scene
+--------+--------------+------+-----+---------+---------
+ Field  | Type         | Null | Key | Default | Remarks 
+--------+--------------+------+-----+---------+---------
+ id     | INT(10)      | NO   | PRI |         |         
+ path   | VARCHAR(255) | YES  |     |         |         
+ userId | INT(10)      | NO   |     |         |         
+--------+--------------+------+-----+---------+---------
+
+Table: user
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ id       | INT(10)      | NO   | PRI |         |         
+ userName | VARCHAR(255) | YES  |     |         |         
+ password | VARCHAR(255) | YES  |     |         |         
+ avatar   | VARCHAR(255) | YES  |     |         |         
+ phone    | VARCHAR(255) | YES  |     |         |         
+ nickname | VARCHAR(255) | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+

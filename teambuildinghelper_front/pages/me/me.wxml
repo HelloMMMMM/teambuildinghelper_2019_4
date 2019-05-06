@@ -1,0 +1,24 @@
+<view class="index">
+  <!--头部-->
+  <view class="index-hd">
+    <image class='index-logo' src="{{(info&&info.avatar)?info.avatar:'../../imgs/default_avatar.png'}}" bindtap="{{info?'changeAvatar':'toLogin'}}"></image>
+    <view class="kind-list-text" bindtap="{{info?'':'toLogin'}}">{{info?info.nickname:'登录'}}</view>
+  </view>
+  <!--body-->
+  <view class="index-bd">
+    <view>
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view id='{{item.id}}' class="kind-list-item" bindtap="{{item.isInfo?'':'clickItem'}}">
+
+          <view class="kind-list-item-hd">
+            <!--如果是信息展示项就展示信息，否则显示右箭头图标-->
+            <view class="kind-list-text">{{item.name}}</view>
+            <image wx:if='{{!item.isInfo}}' class='right-arrow' src='../../imgs/right_arrow.png'></image>
+            <view wx:else>{{info?info.phone:''}}</view>
+          </view>
+          
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

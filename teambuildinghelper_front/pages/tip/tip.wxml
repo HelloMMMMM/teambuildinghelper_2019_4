@@ -1,0 +1,21 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="index">
+
+  <!--body-->
+  <form bindsubmit='formSubmit'>
+    <view class="index-bd">
+    <view style='margin-top:40rpx;margin-bottom:40rpx;'>正在向预定的活动({{tip.title}})的组织者({{tip.agency}})留言</view>
+      <view>
+        <block>
+          <view class="kind-list-item">
+            <view class="kind-list-item-hd">
+              <textarea name='content' style="height: 7em" placeholder='留言'/>
+            </view>
+          </view>
+        </block>
+
+        <button type="primary" form-type='submit'>提交</button>
+      </view>
+    </view>
+  </form>
+</view>

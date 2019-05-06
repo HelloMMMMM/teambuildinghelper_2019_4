@@ -1,0 +1,24 @@
+<view class="index">
+  <!--body-->
+  <view class="index-bd">
+    <view wx:for="{{list}}" wx:for-item="page">
+      <block wx:for-items="{{page}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+
+          <view class="kind-list-item-hd">
+            <image src='{{item.goodsImg}}' class='goods-img'></image>
+            <view class='goods-info'>
+              <view class="kind-list-text">{{item.goodsName}}</view>
+              <view class="kind-list-text">{{item.goodsPrice}}元</view>
+            </view>
+          </view>
+
+          <view class='goods-btn'>
+            <button id='{{item.id}}' type="primary" size="mini" bindtap='buyGoods'>购买</button>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

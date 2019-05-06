@@ -1,0 +1,27 @@
+<view>
+
+  <!--
+  <view>
+    <view class="index-desc header-desc">去向活动组织者留言吧！</view>
+    <button bindtap='toTip' type="primary" class='header-btn'>留言</button>
+  </view>-->
+
+  <view class="index-hd">
+    <view class="kind-list-text">我的现场</view>
+  </view>
+  <!--body-->
+
+  <button bindtap='upload' type="primary" class='header-btn'>上传图片</button>
+
+  <view class="index-bd">
+    <view wx:for="{{list}}" wx:for-item="page">
+      <block wx:for="{{page}}" wx:for-item="item">
+        <view class="kind-list-item">
+          <view class='kind-list-item-hd'>
+            <image bindtap='preview' data-path='{{item}}' src='{{item}}' mode="widthFix"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

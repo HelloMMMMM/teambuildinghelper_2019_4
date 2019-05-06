@@ -1,0 +1,52 @@
+<!--pages/myorder/myorder.wxml-->
+<view class="index-bd">
+  <view wx:for="{{list}}" wx:for-item="page">
+    <block wx:for-items="{{page}}" wx:key="{{item.id}}">
+      <view class="kind-list-item">
+
+        <view wx:if='{{item.orderType==1}}'>
+          <view class="kind-list-item-hd">
+            商品订单
+          </view>
+          <view class="kind-list-item-hd">
+            <image src='{{item.goods.goodsImg}}' class='goods-img'></image>
+            <view class='goods-info'>
+              <view class="kind-list-text">{{item.goods.goodsName}}</view>
+              <view class="kind-list-text">{{item.goods.goodsPrice}}元</view>
+            </view>
+          </view>
+        </view>
+
+        <view wx:elif="{{item.orderType==2}}">
+          <view class="kind-list-item-hd">
+            活动订单-{{item.activity.activityName}}
+          </view>
+          <view class="invitation-content">
+            {{item.activity.activityContent}}
+          </view>
+          <view class='invitation-base-info'>
+            组织商家
+          </view>
+
+          <view class='agency-container'>
+            <view class="invitation-content">
+              商家名称:{{item.agency.agencyName}}
+            </view>
+            <view class="invitation-content">
+              联系方式:{{item.agency.agencyPhone}}
+            </view>
+            <view class="invitation-content">
+              价格:{{item.price}}元
+            </view>
+          </view>
+
+          <view class='invitation-btn-container'>
+            <button data-email='{{item.agency.agencyPhone}}' data-title='{{item.activity.activityName}}'
+            data-agency='{{item.agency.agencyName}}' bindtap='toTip' class='invitation-btn' type="primary" size="mini">留言</button>
+          </view>
+
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/store/store",
+    "pages/activity/activity",
+    "pages/overall/overall",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/editinfo/editinfo",
+    "pages/myorder/myorder",
+    "pages/createinvitation/createinvitation",
+    "pages/shareinvitation/shareinvitation",
+    "pages/feedback/feedback",
+    "pages/tip/tip"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "团建助手",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "邀请",
+        "iconPath": "imgs/ic_index_normal.png",
+        "selectedIconPath": "imgs/ic_index_selected.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "商店",
+        "iconPath": "imgs/ic_store_normal.png",
+        "selectedIconPath": "imgs/ic_store_selected.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "imgs/ic_activity_normal.png",
+        "selectedIconPath": "imgs/ic_activity_selected.png"
+      },
+      {
+        "pagePath": "pages/overall/overall",
+        "text": "统筹",
+        "iconPath": "imgs/ic_overall_normal.png",
+        "selectedIconPath": "imgs/ic_overall_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "imgs/ic_my_normal.png",
+        "selectedIconPath": "imgs/ic_my_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 100000,
+    "connectSocket": 100000,
+    "uploadFile": 100000,
+    "downloadFile": 100000
+  },
+  "sitemapLocation": "sitemap.json"
+}

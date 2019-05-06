@@ -1,0 +1,35 @@
+/* pages/store/store.wxss */
+@import "../common/index.wxss";
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+.text-box{
+  padding: 40rpx 0;
+  display: flex;
+  background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30rpx;
+  color: #353535;
+  line-height: 2em;
+}
+
+.goods-img{
+  width:120rpx;
+  height: 120rpx;
+}
+
+.goods-info{
+  margin-left: 32rpx;
+}
+
+.goods-btn{
+  padding-right: 30rpx;
+  padding-bottom: 16rpx;
+  text-align: end;
+  transition: opacity .3s;
+}

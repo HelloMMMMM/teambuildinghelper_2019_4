@@ -1,0 +1,52 @@
+/* pages/myorder/myorder.wxss */
+@import "../common/index.wxss";
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+.invitation-content{
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 16rpx;
+  transition: opacity .3s;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.invitation-btn-container{
+  padding-right: 30rpx;
+  padding-bottom: 16rpx;
+  text-align: end;
+  transition: opacity .3s;
+}
+
+.invitation-base-info{
+  padding-left: 30rpx;
+  padding-bottom: 16rpx;
+  text-align: start;
+  transition: opacity .3s;
+  color: #000000;
+  font-size: 28rpx;
+}
+
+.invitation-btn{
+  margin-left: 16rpx;
+}
+
+.agency-container{
+  text-align: start;
+  transition: opacity .3s;
+}
+
+.goods-img{
+  width:120rpx;
+  height: 120rpx;
+}
+
+.goods-info{
+  margin-left: 32rpx;
+}

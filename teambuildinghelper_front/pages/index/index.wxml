@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="index">
+  <view>
+    <view class="index-desc header-desc">赶快创建邀请函或者使用现有邀请函邀请您的亲朋好友来参加活动吧！</view>
+    <button bindtap='createInvitation' type="primary" class='header-btn'>创建邀请函</button>
+  </view>
+
+  <view class="index-hd">
+    <view class="kind-list-text">我的邀请函</view>
+  </view>
+  <!--body-->
+
+  <view class="index-bd">
+    <view wx:for="{{list}}" wx:for-item="page">
+      <block wx:for-items="{{page}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+
+          <view class="kind-list-item-hd">
+            {{item.invitationTitle}}
+          </view>
+
+          <view class="invitation-content">
+            {{item.invitationContent}}
+          </view>
+
+          <view class='invitation-base-info'>
+            {{item.inviterName}}
+          </view>
+
+          <view class='invitation-btn-container'>
+            <button id='{{item.id}}' bindtap='deleteInvitation' class='invitation-btn' type="primary" size="mini">删除</button>
+            <button bindtap='modifyInvitation' data-id='{{item.id}}' data-title='{{item.invitationTitle}}' data-content='{{item.invitationContent}}' class='invitation-btn' type="primary" size="mini">修改</button>
+            <button open-type="share" data-title='{{item.invitationTitle}}' data-content='{{item.invitationContent}}' data-inviter='{{item.inviterName}}' class='invitation-btn' type="primary" size="mini">发送</button>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

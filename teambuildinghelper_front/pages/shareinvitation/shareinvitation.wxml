@@ -1,0 +1,22 @@
+<!--pages/shareinvitation/shareinvitation.wxml-->
+<view class="index-bd">
+    <view>
+      <block>
+        <view class="kind-list-item">
+
+          <view class="kind-list-item-hd">
+            {{invitation.title}}
+          </view>
+
+          <view class="invitation-content">
+            {{invitation.content}}
+          </view>
+
+          <view class='invitation-base-info'>
+            邀请人:{{invitation.inviter}}
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>

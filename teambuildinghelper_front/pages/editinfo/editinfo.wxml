@@ -1,0 +1,21 @@
+<!--pages/editinfo/editinfo.wxml-->
+<view class="index">
+  <!--body-->
+  <form bindsubmit='updateInfo'>
+    <view class="index-bd">
+      <view>
+        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+          <view class="kind-list-item">
+
+            <view class="kind-list-item-hd">
+              <input password='{{item.isPassword}}' name='{{item.id}}' class="kind-list-text" type='{{item.type}}' placeholder='{{item.name}}' maxlength='{{item.maxLength}}' value='{{item.value}}'></input>
+            </view>
+
+          </view>
+        </block>
+
+        <button type="primary" form-type='submit'>更新</button>
+      </view>
+    </view>
+  </form>
+</view>

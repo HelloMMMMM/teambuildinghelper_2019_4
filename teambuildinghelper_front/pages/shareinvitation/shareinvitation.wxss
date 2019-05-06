@@ -1,0 +1,27 @@
+/* pages/shareinvitation/shareinvitation.wxss */
+@import "../common/index.wxss";
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+.invitation-content{
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 16rpx;
+  transition: opacity .3s;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.invitation-base-info{
+  padding-right: 30rpx;
+  padding-bottom: 16rpx;
+  text-align: end;
+  transition: opacity .3s;
+  color: #000000;
+  font-size: 28rpx;
+}
